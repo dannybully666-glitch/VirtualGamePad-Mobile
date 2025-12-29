@@ -142,15 +142,3 @@ dependencies {
     debugImplementation(libs.compose.ui.test.manifest)
     debugImplementation(libs.compose.ui.tooling)
 }
-
-val updateVGPDataExchangePackage by tasks.registering(ProcessResources::class) {
-    println("Updating VGP_Data_Exchange package...")
-    from(rootDir.toPath().resolve("VGP_Data_Exchange/io/github/kitswas/VGP_Data_Exchange"))
-    into(rootDir.toPath().resolve("app/src/main/java/io/github/kitswas/VGP_Data_Exchange"))
-}
-
-tasks.matching {
-    it != updateVGPDataExchangePackage.get()
-}.configureEach {
-    dependsOn(updateVGPDataExchangePackage)
-}
