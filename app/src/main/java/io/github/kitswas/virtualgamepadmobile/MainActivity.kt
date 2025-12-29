@@ -15,7 +15,7 @@ import io.github.kitswas.virtualgamepadmobile.data.defaultBaseColor
 import io.github.kitswas.virtualgamepadmobile.data.defaultColorScheme
 import io.github.kitswas.virtualgamepadmobile.data.defaultHapticFeedbackEnabled
 import io.github.kitswas.virtualgamepadmobile.ui.screens.AboutScreen
-import io.github.kitswas.virtualgamepadmobile.ui.screens.GamePad
+import io.github.kitswas.virtualgamepadmobile.ui.screens.Gamepad
 import io.github.kitswas.virtualgamepadmobile.ui.screens.MainMenu
 import io.github.kitswas.virtualgamepadmobile.ui.screens.SettingsScreen
 import io.github.kitswas.virtualgamepadmobile.ui.theme.VirtualGamePadMobileTheme
@@ -81,7 +81,7 @@ class MainActivity : ComponentActivity() {
             }
 
             composable("gamepad") {
-                GamePad(
+                Gamepad(
                     onNavigateBack = { navController.popBackStack() }
                 )
             }
